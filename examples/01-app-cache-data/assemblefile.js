@@ -23,32 +23,18 @@ app.task('app-cache-data', function(cb) {
 
   /**
    * Add "global" data to `app.cache.data` through the `app.data` method:
-   *
-   * ```js
-   * app.data({title: 'Site Title'});
-   * ```
-   * @api public
-   * @name add-app-cache-data
    */
 
   app.data({title: utils.cyan('Site Title')});
 
   /**
    * Add a simple "button" partial with no other data.
-   *
-   * ```js
-   * app.partial('button', {content: 'button: <%= title %>'});
-   * ```
-   * @api public
-   * @name add-simple-button-partial
    */
 
   app.partial('button', {content: 'button: <%= title %>'});
 
   /**
    * Add a simple "home" page with no other data that includes the 3 "button" partials.
-   * @api public
-   * @name add-simple-home-page
    */
 
   app.page('home', {
@@ -62,11 +48,10 @@ app.task('app-cache-data', function(cb) {
 
   var home = app.pages.getView('home');
   console.log('Rendering "home" page with default `app.cache.data`:\n');
+
   /**
    * Render the "home" page using all the defaults.
    * This will show that the `title` property from `app.cache.data` is used throughout the "home" page and all the "button" partials.
-   * @api public
-   * @name render-simple-home-page
    */
 
   home.render(function(err, res) {
@@ -77,7 +62,6 @@ app.task('app-cache-data', function(cb) {
     console.log(res.content, '\n\n');
     cb();
   });
-
 });
 
 app.task('default', ['app-cache-data']);

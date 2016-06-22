@@ -8,12 +8,6 @@ var app = assemble();
  * View locals is the data object that is on view objects that will be used to override `app.cache.data`.
  * The following example will show how the view locals will override data from `app.cache.data`, but is overriden by "render locals" when the context is created.
  *
- * To run this example:
- *
- * ```sh
- * $ assemble view-locals
- * ```
- *
  * @name view-locals
  * @api public
  */
@@ -30,12 +24,6 @@ app.task('view-locals', function(cb) {
   /**
    * Add "global" data to `app.cache.data` through the `app.data` method.
    * This will be overridden by the render and view locals when the page is rendered.
-   *
-   * ```js
-   * app.data({title: 'Site Title'});
-   * ```
-   * @api public
-   * @name add-app-cache-data
    */
 
   app.data({title: utils.cyan('Site Title')});
@@ -43,15 +31,6 @@ app.task('view-locals', function(cb) {
   /**
    * Add a "button" partial with view locals data.
    * This data is only overriden by "render locals" if the button is rendered directly with `.render` and "render locals" are passed into `.render`.
-   *
-   * ```js
-   * app.partial('button', {
-   *   content: 'button: <%= title %>',
-   *   locals: 'Button Locals Title'
-   * });
-   * ```
-   * @api public
-   * @name add-locals-button-partial
    */
 
   app.partial('button', {
@@ -61,8 +40,6 @@ app.task('view-locals', function(cb) {
 
   /**
    * Add a "home" page with view locals data that includes the 3 "button" partials.
-   * @api public
-   * @name add-locals-home-page
    */
 
   app.page('home', {
@@ -77,11 +54,10 @@ app.task('view-locals', function(cb) {
 
   var home = app.pages.getView('home');
   console.log('Rendering "home" page with default `app.cache.data`.\nView locals will override `app.cache.data`:\n');
+
   /**
    * Render the "home" page using all the defaults.
    * This will show that the `title` property from the view locals is used throughout the "home" page and all the "button" partials.
-   * @api public
-   * @name render-locals-home-page-with-default-data
    */
 
   home.render(function(err, res) {
@@ -92,11 +68,10 @@ app.task('view-locals', function(cb) {
     console.log(res.content, '\n\n');
 
     console.log('Rendering "home" page with "render locals" that will override data from `app.cache.data`\nView locals will override "render locals":\n');
+
     /**
      * Render the "home" page using render locals.
      * This will show that the `title` property from the render locals is in the "home" page, but the "view locals" is used in all of the "button" partials.
-     * @api public
-     * @name render-locals-home-page-with-render-locals
      */
 
     home.render({title: utils.yellow('Render Locals Title')}, function(err, res) {

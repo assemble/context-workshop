@@ -8,12 +8,6 @@ var app = assemble();
  * Helper locals is the data object that is passed into the built-in view helpers. This data will override all other data for that specific view.
  * The following example will show how the helper locals will override all other data when rendering a partial view.
  *
- * To run this example:
- *
- * ```sh
- * $ assemble helper-locals
- * ```
- *
  * @name helper-locals
  * @api public
  */
@@ -30,12 +24,6 @@ app.task('helper-locals', function(cb) {
   /**
    * Add "global" data to `app.cache.data` through the `app.data` method.
    * This will be overridden by the render locals and view data when the page is rendered.
-   *
-   * ```js
-   * app.data({title: 'Site Title'});
-   * ```
-   * @api public
-   * @name add-app-cache-data
    */
 
   app.data({title: utils.cyan('Site Title')});
@@ -44,16 +32,6 @@ app.task('helper-locals', function(cb) {
    * Add a "button" partial with view locals data and view data.
    * The view data will override `app.cache.data`, "render locals", and "view locals".
    * When "helper locals" is passed to the "partial" helper, all data on the view will be overriden.
-   *
-   * ```js
-   * app.partial('button', {
-   *   content: 'button: <%= title %>',
-   *   locals: 'Button Locals Title',
-   *   data: 'Button Data Title'
-   * });
-   * ```
-   * @api public
-   * @name add-helper-locals-button-partial
    */
 
   app.partial('button', {
@@ -67,8 +45,6 @@ app.task('helper-locals', function(cb) {
    * Button "one" will be rendered without passing any helper locals.
    * Button "two" will be rendered with the "home" page's data passed as the helper locals.
    * Button "three" will be rendered with a "custom" property from the "render locals" passed as the helper locals.
-   * @api public
-   * @name add-helper-locals-home-page
    */
 
   app.page('home', {
@@ -84,11 +60,10 @@ app.task('helper-locals', function(cb) {
 
   var home = app.pages.getView('home');
   console.log('Rendering "home" page with default `app.cache.data`.\nView data will override `app.cache.data`.\nHelper locals will override all other data:\n');
+
   /**
    * Render the "home" page using all the defaults.
    * This will show that the `title` property from the view data is used throughout the "home" page and the "button" partials without helper locals.
-   * @api public
-   * @name render-helper-locals-home-page-with-default-data
    */
 
   home.render(function(err, res) {
@@ -99,11 +74,10 @@ app.task('helper-locals', function(cb) {
     console.log(res.content, '\n\n');
 
     console.log('Rendering "home" page with "render locals" that will override data from `app.cache.data`\nView data will override "render locals".\nHelper locals will override all other data:\n');
+
     /**
      * Render the "home" page using render locals.
      * This will show that the `title` property from the view data is in the "home" page and the "button" partials will use their own view data.
-     * @api public
-     * @name render-data-home-page-with-render-locals
      */
 
     home.render({title: utils.yellow('Render Locals Title')}, function(err, res) {
