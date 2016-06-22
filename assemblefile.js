@@ -16,17 +16,22 @@ app.create('pages');
 app.data({title: 'Site Title'});
 
 /**
- * Partial
+ * Custom `context` function
+ */
+
+
+app.option('context', function(view, locals) {
+  return extend({}, this.cache.data, view.context(), locals);
+});
+
+/**
+ * Partial (view.locals, view.data)
  */
 
 app.partial('button', {
   content: 'button: <%= title %>',
   locals: {title: 'Button Locals Title'},
   data: {title: 'Button Data Title'}
-});
-
-app.option('context', function(view, locals) {
-  return extend({}, this.cache.data, view.context(), locals);
 });
 
 /**
