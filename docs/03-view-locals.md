@@ -13,7 +13,7 @@ Code snippet from example [assemblefile.js](./examples/03-view-locals/assemblefi
 app.data({title: 'Site Title'});
 
 // Add a "button" partial with view locals data.
-// This data is only overriden by "render locals" if the button is rendered directly with `.render` and "render locals" are passed into `.render`.
+// This data is only overridden by "render locals" if the button is rendered directly with `.render` and "render locals" are passed into `.render`.
 
 app.partial('button', {
   content: 'button: <%= title %>',

@@ -40,7 +40,7 @@ app.task('customizing', function(cb) {
   /**
    * Add a "button" partial with view locals data and view data.
    * The view data will override `app.cache.data`, "render locals", and "view locals".
-   * When "helper locals" is passed to the "partial" helper, all data on the view will be overriden.
+   * When "helper locals" is passed to the "partial" helper, all data on the view will be overridden.
    */
 
   app.partial('button', {

@@ -6,7 +6,7 @@ var app = assemble();
 
 /**
  * View locals is the data object that is on view objects that will be used to override `app.cache.data`.
- * The following example will show how the view locals will override data from `app.cache.data`, but is overriden by "render locals" when the context is created.
+ * The following example will show how the view locals will override data from `app.cache.data`, but is overridden by "render locals" when the context is created.
  *
  * @name view-locals
  * @api public
@@ -30,7 +30,7 @@ app.task('view-locals', function(cb) {
 
   /**
    * Add a "button" partial with view locals data.
-   * This data is only overriden by "render locals" if the button is rendered directly with `.render` and "render locals" are passed into `.render`.
+   * This data is only overridden by "render locals" if the button is rendered directly with `.render` and "render locals" are passed into `.render`.
    */
 
   app.partial('button', {
