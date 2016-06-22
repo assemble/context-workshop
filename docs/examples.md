@@ -38,3 +38,4 @@ $ assemble -i
 {%= doc('03-view-locals.md') %}
 {%= doc('04-view-data.md') %}
 {%= doc('05-helper-locals.md') %}
+{%= doc('06-customizing.md') %}
