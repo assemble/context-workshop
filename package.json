@@ -21,6 +21,9 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "assemble": "^0.14.0",
+    "engine-base": "^0.1.2",
+    "extend-shallow": "^2.0.1",
     "gulp-format-md": "*",
     "mocha": "^2.5.3"
   },
