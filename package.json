@@ -1,8 +1,8 @@
 {
   "name": "context-workshop",
-  "description": "Learn how context works in templates.",
+  "description": "One of assemble's biggest strengths is granular control over `context`. This workshop explains how context is created, as well as where, when and why the context works the way it does at each point in the render cycle.",
   "version": "0.1.0",
-  "homepage": "https://github.com/jonschlinkert/context-workshop",
+  "homepage": "https://github.com/assemble/context-workshop",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/context-workshop",
   "bugs": {
