@@ -9,9 +9,7 @@
     "url": "https://github.com/jonschlinkert/context-workshop/issues"
   },
   "license": "MIT",
-  "files": [
-    "index.js"
-  ],
+  "files": [],
   "main": "index.js",
   "engines": {
     "node": ">=0.10.0"
@@ -22,9 +20,11 @@
   "dependencies": {},
   "devDependencies": {
     "assemble": "^0.14.0",
+    "base-questions": "^0.6.6",
     "engine-base": "^0.1.2",
     "extend-shallow": "^2.0.1",
     "gulp-format-md": "*",
+    "log-utils": "^0.1.4",
     "mocha": "^2.5.3"
   },
   "keywords": [],
