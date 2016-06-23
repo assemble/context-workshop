@@ -24,6 +24,7 @@ app.task('customizing', function(cb) {
 
   /**
    * Add a context option
+   * This will override all the other data with the "render locals".
    */
 
   app.option('context', function(view, locals) {
@@ -39,7 +40,7 @@ app.task('customizing', function(cb) {
 
   /**
    * Add a "button" partial with view locals data and view data.
-   * The view data will override `app.cache.data`, "render locals", and "view locals".
+   * Since we're using a custom context option, the "render locals" will override the view data.
    * When "helper locals" is passed to the "partial" helper, all data on the view will be overridden.
    */
 
@@ -82,7 +83,7 @@ app.task('customizing', function(cb) {
     }
     console.log(res.content, '\n\n');
 
-    console.log('Rendering "home" page with "render locals" that will override data from `app.cache.data`\nView data will override "render locals".\nHelper locals will override all other data:\n');
+    console.log('Rendering "home" page with "render locals" that will override data from `app.cache.data`\n"Render locals" will override view data due to custom context option.\nHelper locals will override all other data:\n');
 
     /**
      * Render the "home" page using render locals.
