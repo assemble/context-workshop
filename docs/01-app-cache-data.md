@@ -6,6 +6,9 @@ To run this example:
 $ assemble app-cache-data
 ```
 
+![image](https://cloud.githubusercontent.com/assets/995160/16308022/6e9e6ef0-3931-11e6-82d2-a595b0f798fc.png)
+
+
 Code snippet from example [assemblefile.js](./examples/01-app-cache-data/assemblefile.js)
 
 ```js

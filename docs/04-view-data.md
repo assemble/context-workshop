@@ -6,6 +6,8 @@ To run this example:
 $ assemble view-data
 ```
 
+![image](https://cloud.githubusercontent.com/assets/995160/16308172/eac00a7a-3931-11e6-8006-152eb63185a3.png)
+
 Code snippet from example [assemblefile.js](./examples/04-view-data/assemblefile.js)
 
 ```js

@@ -6,6 +6,8 @@ To run this example:
 $ assemble render-locals
 ```
 
+![image](https://cloud.githubusercontent.com/assets/995160/16308107/b3287bce-3931-11e6-8c56-2676d4515c24.png)
+
 Code snippet from example [assemblefile.js](./examples/02-render-locals/assemblefile.js)
 
 ```js

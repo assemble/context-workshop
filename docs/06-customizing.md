@@ -6,11 +6,14 @@ To run this example:
 $ assemble customizing
 ```
 
+![image](https://cloud.githubusercontent.com/assets/995160/16308576/88c480b0-3933-11e6-8873-2e40ddaefaf5.png)
+
 Code snippet from example [assemblefile.js](./examples/06-customizing/assemblefile.js)
 
 ```js
 // Add a context option
 app.option('context', function(view, locals) {
+  // override all the other data with the "render locals"
   return extend({}, this.cache.data, view.context(), locals);
 });
 

@@ -6,6 +6,8 @@ To run this example:
 $ assemble helper-locals
 ```
 
+![image](https://cloud.githubusercontent.com/assets/995160/16308201/0bf8ee1e-3932-11e6-81e8-9eae38234e95.png)
+
 Code snippet from example [assemblefile.js](./examples/05-helper-locals/assemblefile.js)
 
 ```js
