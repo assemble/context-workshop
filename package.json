@@ -29,7 +29,7 @@
   },
   "keywords": [],
   "verb": {
-    "toc": false,
+    "toc": true,
     "layout": "default",
     "tasks": [
       "readme"
@@ -38,9 +38,10 @@
       "gulp-format-md"
     ],
     "reflinks": [
+      "base-data",
       "verb",
       "verb-readme-generator",
-      "base-data"
+      "assemble"
     ],
     "lint": {
       "reflinks": true
