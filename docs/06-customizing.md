@@ -21,15 +21,15 @@ app.option('context', function(view, locals) {
 app.data({title: 'Site Title'});
 
 // create a simple "button" partial
-app.partial('button', {content: 'button: {{ title }}'});
+app.partial('button', {content: 'button: <%= title %>'});
 
 // create a simple "home" page containing 3 "button" partials
 app.page('home', {
   content: [
-    'title: {{ title }}',
-    'one:   {{ partial("button") }}',
-    'two:   {{ partial("button") }}',
-    'three: {{ partial("button") }}'
+    'title: <%= title %>',
+    'one:   <%= partial("button") %>',
+    'two:   <%= partial("button") %>',
+    'three: <%= partial("button") %>'
   ].join('\n')
 });
 
