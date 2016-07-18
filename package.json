@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "homepage": "https://github.com/assemble/context-workshop",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
-  "repository": "jonschlinkert/context-workshop",
+  "repository": "assemble/context-workshop",
   "bugs": {
-    "url": "https://github.com/jonschlinkert/context-workshop/issues"
+    "url": "https://github.com/assemble/context-workshop/issues"
   },
   "license": "MIT",
   "files": [],
