@@ -1,7 +1,7 @@
 {
   "name": "context-workshop",
   "description": "One of assemble's biggest strengths is granular control over `context`. This workshop explains how context is created, as well as where, when and why the context works the way it does at each point in the render cycle.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/assemble/context-workshop",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "assemble/context-workshop",
