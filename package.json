@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "files": [
-    "templates/",
+    "examples/",
     "assemblefile.js"
   ],
   "main": "assemblefile.js",
