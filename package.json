@@ -9,8 +9,11 @@
     "url": "https://github.com/assemble/context-workshop/issues"
   },
   "license": "MIT",
-  "files": [],
-  "main": "index.js",
+  "files": [
+    "templates/",
+    "assemblefile.js"
+  ],
+  "main": "assemblefile.js",
   "engines": {
     "node": ">=0.10.0"
   },
